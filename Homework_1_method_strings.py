@@ -38,7 +38,7 @@ print(break_thing)
 
 a = "ME LLAMO"
 b = "daniela"
-print a.lower(), b.upper()
+print(a.lower(), b.upper())
 
 print(break_thing)
 
@@ -56,21 +56,30 @@ fruits_with_b = "Eanana, Elueberries"
 print(fruits_with_a.replace("O", "A"))
 print(fruits_with_b.replace("E", "B"))
 
+# replace() to multiple friends in a list
+fruits = ['Opple', 'Opricot', 'Eanana', 'Elueberries']
+for fruit in fruits:
+    fruit = fruit.replace("O", "A").replace("E", "B")
+    print(fruit)
+
 print(break_thing)
 
 #split() returns a list of strings after breaking the given string by the specified separator.
 
-phrase = "Like, Apples?"
-print phrase.split(",")
+phrase = "Hey Daniela, you are doing great!"
+split_phrases = phrase.split(" ")
+print(split_phrases)
+print(len(split_phrases))
 
 print(break_thing)
 
 #capitalize() converts the first character of a string to uppercase letter.
 
 name = "daniela"
+capital_name = name.capitalize()
 last_name = "gonzalez"
 second_last_name = "barron"
-print(name.capitalize()) + last_name.capitalize() + second_last_name.capitalize()
+print(f"{capital_name} {last_name.capitalize()} {second_last_name.capitalize()}")
 
 print(break_thing)
 
@@ -85,7 +94,7 @@ print(break_thing)
 
 str1 = "and the chamber of secrets"
 str2 = str1.title()
-print "Harry Potter", str2
+print("Harry Potter " + str2)
 
 print(break_thing)
 
@@ -100,6 +109,9 @@ print(result1)
 print(result2)
 print(result3)
 print(result4)
+
+ex = "hello"
+print(ex.rfind("l")) # returns 3 -- last place of l
 
 print(break_thing)
 
@@ -137,3 +149,5 @@ result = text2.endswith("cuentas")
 print(result)
 result = text3.endswith("cuentas")
 print(result)
+
+
