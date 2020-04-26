@@ -38,7 +38,7 @@ print(break_thing)
 
 a = "ME LLAMO"
 b = "daniela"
-print a.lower(), b.upper()
+print(f"{a.lower()},{b.upper()}")
 
 print(break_thing)
 
@@ -61,7 +61,7 @@ print(break_thing)
 #split() returns a list of strings after breaking the given string by the specified separator.
 
 phrase = "Like, Apples?"
-print phrase.split(",")
+print (phrase.split(","))
 
 print(break_thing)
 
@@ -70,7 +70,7 @@ print(break_thing)
 name = "daniela"
 last_name = "gonzalez"
 second_last_name = "barron"
-print(name.capitalize()) + last_name.capitalize() + second_last_name.capitalize()
+print(name.capitalize() + " " + last_name.capitalize() + " " + second_last_name.capitalize())
 
 print(break_thing)
 
@@ -83,9 +83,9 @@ print(break_thing)
 
 #title() used to convert the first character in each word to Uppercase.
 
-str1 = "and the chamber of secrets"
+str1 = " and the chamber of secrets"
 str2 = str1.title()
-print "Harry Potter", str2
+print(f"Harry Potter{str2}")
 
 print(break_thing)
 
