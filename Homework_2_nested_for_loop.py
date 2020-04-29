@@ -21,9 +21,9 @@ data = [
     }
 ]
 
-for person in data:
-    for key, value in person.items():
-        print(value["nationality"])
+# for person in data:
+#     for key, value in person.items():
+#         print(value["nationality"])
 
 users = [
     {
@@ -34,7 +34,13 @@ users = [
             1: "Naan",
             2: "Lovebug",
             3: "Dani"
-        }
+        },
+        "hobbies": [
+            "painting",
+            "coding",
+            "singing",
+            "fortniting"
+        ]
     },
     {
         "name": "Cody",
@@ -45,12 +51,22 @@ users = [
             2: "Codyman",
             3: "Hawaii"
         }
+    },
+    {
+        "name": "Rocio",
+        "age": 55,
+        "height": 157,
+        "hobbies": [
+            "cooking",
+            "singing",
+            "family time"
+        ]
     }
 ]
 
-# for user in users:
-#     print(user["nicknames"].items())
-#     for key, value in user["nicknames"].items():
-#         print(key, value)
+for user in users:
+    if "hobbies" in user:
+        print(user["name"], user["hobbies"])
 
-# print(users[1])
+# for i in range(len(users)):
+#     print(users[0]["hobbies"])
