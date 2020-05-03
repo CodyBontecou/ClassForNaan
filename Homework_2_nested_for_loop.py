@@ -57,8 +57,37 @@ users = [
         "age": 55,
         "height": 157,
         "hobbies": [
-            "cooking",
-            "singing",
+            {
+                "cooking": {
+                    "recipes": {
+                        "pumpkin pie":
+                            {
+                                "ingredients": [
+                                    "pumpkin",
+                                    "butter",
+                                    "creamcheese",
+                                    "crust",
+                                    "flour"
+                                ],
+                                "steps": {
+                                    "1": "Mix ingredients",
+                                    "2": "Melt butter",
+                                    "3": "Bake it"
+                                },
+                                "rating": 5,
+                                "review": "One of my favorite pies. I bake it probably 6 times a year"
+                            },
+                    },
+                }},
+            {
+                "singing": {
+                    "favorite_songs": {
+                        "pop_songs": [
+                            { "name": "ETA", "artist": "Justin Bieber", "" }
+                        ],
+                    }
+                }
+            },
             "family time"
         ]
     }
@@ -66,7 +95,7 @@ users = [
 
 for user in users:
     if "hobbies" in user:
-        print(user["name"], user["hobbies"])
-
-# for i in range(len(users)):
-#     print(users[0]["hobbies"])
+        # print(user["name"], user["hobbies"])
+        if "cooking" in user["hobbies"][0]:
+            for key, value in user["hobbies"][0].items():
+                print(value["recipes"])
