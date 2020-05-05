@@ -77,9 +77,6 @@ for guest in wedding_list:
 
 print(break_thing)
 
-# [ guest, guest guest, guest, guest guest ] current wedding list
-# [ { normals: [guest, guest, guest] }, { vegans: [guest, guest] }, { vegetarian: [guest] } ]
-
 # Print the number of Normal menus with counter method
 
 counter = 0
@@ -92,11 +89,27 @@ for guest in wedding_list:
         print(guest)
 print(counter)
 
-
 print(break_thing)
 # Print the number of Normal menus with count() function
 guests_with_normal_menu = []
 for guest in wedding_list:
     if guest["menu"] == "Normal":
+        # == to guests_with_normal_menu = [guest, ...].
+        # Append adds a guest to the new list after each iteration of the loop
         guests_with_normal_menu.append(guest)
 print(len(guests_with_normal_menu))
+print(guests_with_normal_menu)
+
+# [ guest, guest guest, guest, guest guest ] current wedding list
+# [ { normals: [guest, guest, guest] }, { vegans: [guest, guest] }, { vegetarian: [guest] } ]
+
+print(break_thing)
+
+sorted_menus = []
+for guest in wedding_list:
+    if guest["menu"] not in sorted_menus:
+        sorted_menus.append(guest["menu"])
+# for menu in sorted_menus:
+#     if guest["menu"] == menu:
+#         menu
+print(sorted_menus)
